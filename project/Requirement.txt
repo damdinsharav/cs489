@@ -1,0 +1,7 @@
+Video streaming site with Android tv box.
+
+
+1. User should be able to list tv channels, and watch them.
+2. System should consume EPG xml and parse it to system.
+3. User should be able to browse through TV channel's last 14 days of EPG, and should be able to watch them.
+4. When watching VOD, users should be able to pause, fast-forward, fast-backward and pause.
