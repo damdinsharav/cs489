@@ -1,0 +1,9 @@
+Functional Requirements
+1. Office manager should be able to register dentist on into the system
+2. Dentist should be able to sign-in
+3. Office manager should be able to  manage appointment
+4. Dentist should be able to view appointments
+5. Patient should be able to view appointments
+6 Patient should be able to request to cancel or change their appointments
+7. Dentist cannot be able to get more than 5 appointments per week 
+8. Patient cannot be able to schedule new appointment if he/she has any outstanding unpaid bills 
