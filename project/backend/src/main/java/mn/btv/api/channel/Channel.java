@@ -12,7 +12,6 @@ import java.util.List;
 @Data
 @Entity
 public class Channel {
-    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -20,7 +19,6 @@ public class Channel {
     private String name;
     private String urlPath;
     private String xmlId;
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "channel")
     private List<Program> programs;
 

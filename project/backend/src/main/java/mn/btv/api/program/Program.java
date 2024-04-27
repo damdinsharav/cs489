@@ -16,11 +16,9 @@ import java.time.LocalDateTime;
 @Entity
 @Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"channel", "start"})})
 public class Program {
-    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "channel", foreignKey = @ForeignKey(name = "FK_CHANNEL"))
     private Channel channel;

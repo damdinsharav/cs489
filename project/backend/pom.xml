@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>mn.btv</groupId>
 	<artifactId>api</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.4</version>
 	<name>API backend</name>
 	<description>API backend</description>
 	<properties>
@@ -25,10 +25,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>

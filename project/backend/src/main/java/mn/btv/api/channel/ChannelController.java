@@ -19,7 +19,7 @@ public class ChannelController {
     private ServerService serverService;
 
     @GetMapping("/channels")
-    public ResponseEntity<List<Channel>> getAllChannels() {
+    public ResponseEntity<List<ChannelDTO>> getAllChannels() {
         return ResponseEntity.ok().body(channelService.findAll());
     }
 

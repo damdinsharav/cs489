@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @Service
@@ -22,8 +23,10 @@ public class ProgramService {
     private ProgramRepository programRepository;
     private ChannelService channelService;
 
-    public List<Program> findAllByChannelId(int channelId) {
-        return programRepository.findByChannelIdOrderByStart(channelId);
+    public List<ProgramDTO> findAllByChannelId(int channelId) {
+        return programRepository.findByChannelIdOrderByStart(channelId).stream().map(
+                program -> new ProgramDTO(program.getTitle(), program.getStart(), program.getStop(), program.getDuration())
+        ).collect(Collectors.toList());
     }
 
     public void loadAndSaveEpgData(String url) {

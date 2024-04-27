@@ -16,13 +16,14 @@ public class ProgramController {
     private ProgramService programService;
 
     @GetMapping("/{channelId}/epgs")
-    public ResponseEntity<List<Program>> getAllByEpgs(@PathVariable String channelId) {
+    public ResponseEntity<List<ProgramDTO>> getAllByEpgs(@PathVariable String channelId) {
         return ResponseEntity.ok().body(programService.findAllByChannelId(Integer.parseInt(channelId)));
     }
 
     @GetMapping("/update")
     public ResponseEntity<String> updateEpgs() {
         programService.loadAndSaveEpgData("https://static.btv.mn/zuragt-epg.xml");
+        programService.loadAndSaveEpgData("https://static.btv.mn/skygo-epg.xml");
         return ResponseEntity.ok("EPGs have updated!");
     }
 }

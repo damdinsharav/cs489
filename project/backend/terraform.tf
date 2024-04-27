@@ -37,7 +37,8 @@ resource "kubernetes_deployment" "api" {
 
       spec {
         container {
-          image = "registry.btv.mn/api:0.0.2"
+          image = "registry.btv.mn/api:0.0.4"
+          image_pull_policy          = "Always"
           name  = "api"
           env {
             name  = "API_KEY"
