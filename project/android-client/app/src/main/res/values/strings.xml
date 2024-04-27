@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">btv</string>
+    <string name="play_button_desc">Play channel</string>
 </resources>

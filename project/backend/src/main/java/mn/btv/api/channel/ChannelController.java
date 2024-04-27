@@ -1,6 +1,8 @@
 package mn.btv.api.channel;
 
+import io.ipinfo.api.model.IPResponse;
 import io.ipinfo.spring.strategies.attribute.AttributeStrategy;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import mn.btv.api.server.ServerService;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +21,9 @@ public class ChannelController {
     private ServerService serverService;
 
     @GetMapping("/channels")
-    public ResponseEntity<List<ChannelDTO>> getAllChannels() {
-        return ResponseEntity.ok().body(channelService.findAll());
+    public ResponseEntity<List<ChannelDTO>> getAllChannels(HttpServletRequest request) {
+        IPResponse ipResponse = attributeStrategy.getAttribute(request);
+        return ResponseEntity.ok().body(channelService.findAll(ipResponse));
     }
 
 }

@@ -1,6 +1,5 @@
 package com.example.btv
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER
@@ -40,11 +39,6 @@ import androidx.media3.ui.PlayerView
 import androidx.media3.ui.PlayerView.SHOW_BUFFERING_WHEN_PLAYING
 
 
-val video_Url: String =
-    "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-val video_Url_HLS: String = "https://assets.afcdn.com/video49/20210722/v_645516.m3u8"
-
-//https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
 var passedString: String = ""
 
 class VideoPlayerActivity : ComponentActivity() {
